@@ -1,13 +1,10 @@
 
 TITLE: 
-Words - Fully Responsive Free HTML5 template
+Beyond Home Interiors - Fully Responsive HTML5 template
 
 AUTHOR:
-DESIGNED & DEVELOPED by FreeHTML5.co
+DESIGNED & DEVELOPED by Sruthi Krishna. R
 
-Website: http://freehtml5.co/
-Twitter: http://twitter.com/fh5co
-Facebook: http://facebook.com/fh5co
 
 
 CREDITS:
