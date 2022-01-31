@@ -12,11 +12,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap");
 
 /* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
+  *
+  * 	Template Style 
+  *	Edit this section
+  *
+  * ======================================================= */
 
 body {
   /* font-family: "Arimo", sans-serif; */
@@ -574,7 +574,7 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
   font: bold 14px/0.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #000;
+  background: white;
   transition: all 0.2s ease-out;
 }
 .menu-show .fh5co-nav-toggle i {
@@ -675,7 +675,7 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
 }
 
 #fh5co-hero {
-  width: 65%;
+  width: 100%;
   margin-bottom: 5em;
   min-height: 700px;
   background: #fff url(../images/loader.gif) no-repeat center center;
@@ -701,6 +701,7 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
 #fh5co-hero .flexslider .slides {
   position: relative;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slides {
     overflow: hidden;
@@ -711,7 +712,21 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
   background-size: cover;
   background-position: center center;
   min-height: 700px;
+  /* transition: transform 0.2s; */
   position: relative;
+  height: 100vh;
+  background-size: 110% 110%;
+  background-position: center center;
+  animation: shrink 5s infinite alternate;
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 110% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
 }
 #fh5co-hero .flexslider .slides li:after {
   position: absolute !important;
@@ -761,11 +776,14 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
 #fh5co-hero .flexslider .slider-text > .slider-text-inner {
   display: table-cell;
   vertical-align: middle;
+  padding: 20% 5% 20% 5%;
   height: 700px;
 }
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 60px;
   font-weight: 400;
+  padding-top: 5%;
   color: #fff;
 }
 @media screen and (max-width: 768px) {
@@ -796,13 +814,13 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
   text-decoration: none;
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
-  padding: 5em;
+  padding: 6em;
   /* background: rgba(83, 157, 219, 0.9); */
-  background: linear-gradient(#800000, black);
-  opacity: 0.75;
+  background: linear-gradient(rgb(29, 27, 27), rgba(131, 3, 13, 0.781), black);
+  opacity: 0.85;
   -webkit-box-shadow: 0px 10px 30px -13px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 10px 30px -13px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 30px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 30px 30px 40px -13px rgba(119, 106, 106, 0.75);
 }
 @media screen and (max-width: 992px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
@@ -828,7 +846,7 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
 }
 #fh5co-intro-section {
   margin-bottom: 1px;
-  padding-bottom: 0;
+  padding-bottom: 50px;
 }
 
 #fh5co-blog {
@@ -1275,7 +1293,7 @@ input[type="text"] {
   padding: 0 5px;
 }
 .fh5co-social-icon a i {
-  color: #000;
+  color: white;
 }
 .fh5co-social-icon a:hover,
 .fh5co-social-icon a:focus {
@@ -1935,11 +1953,29 @@ body {
   }
 } /*# sourceMappingURL=style.css.map */
 /* .fh5co-counters .copy-right .footer {
-    padding-left: -25%;
-  } */
+      padding-left: -25%;
+    } */
 /* @media only screen and (max-width: 995px) {
-  .fh5co-counters .copy-right .footer {
-    justify-content: center;
-    text-align: center;
-  }
+    .fh5co-counters .copy-right .footer {
+      justify-content: center;
+      text-align: center;
+    }
+  } */
+/* * {
+  box-sizing: border-box;
 } */
+
+.zoom {
+  padding: 50px;
+  background-color: green;
+  transition: transform 0.2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
